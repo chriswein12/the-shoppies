@@ -1,3 +1,7 @@
 body {
     background-color: rgb(238, 238, 238);
 }
+
+.nominate-btn {
+    padding: 0px 3px;
+}
