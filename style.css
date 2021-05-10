@@ -4,4 +4,14 @@ body {
 
 .nominate-btn {
     padding: 0px 3px;
+    margin-left: 10px;
+}
+
+.row {
+    align-items: flex-start;
+}
+
+.form-box {
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgba(35,35,35,.16);
 }

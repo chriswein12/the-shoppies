@@ -31,6 +31,7 @@ const movieSearch = function(event) {
 
 function displaySearchResults(movieResults) {
     console.log(movieResults);
+    movieSearchResultsEl.textContent = "";
 
     if (movieResults.Response === "False") {
         movieSearchResultsEl.textContent = "No movies found.";
@@ -42,13 +43,14 @@ function displaySearchResults(movieResults) {
     for (let i = 0; i < movieResults.Search.length; i++) {
         const movieName = movieResults.Search[i].Title;
         const movieYear = movieResults.Search[i].Year;
+        const movieInfo = movieName + " (" + movieYear + ")";
         
         const singleResultEl = document.createElement("li");
         const singleResultTextEl = document.createElement("p");
         const nominateBtnEl = document.createElement("button")
 
 
-        singleResultTextEl.textContent = movieName + " (" + movieYear + ") ";
+        singleResultTextEl.textContent = movieInfo;
         nominateBtnEl.classList = "btn nominate-btn btn-secondary";
         nominateBtnEl.textContent = "Nominate";
         nominateBtnEl.addEventListener("click", addNomination);
@@ -58,8 +60,10 @@ function displaySearchResults(movieResults) {
         movieSearchResultsEl.appendChild(singleResultEl);
 
         for (let i = 0; i < nominations.length; i++) {
-            if (singleResultTextEl.textContent === nominations[i].textContent) {
+            if (movieInfo === nominations[i]) {
                 nominateBtnEl.setAttribute("disabled", "")
+            } else {
+                console.log(nominations[i])
             }
         }
 
@@ -74,9 +78,10 @@ const addNomination = function (event) {
     targetEl.setAttribute("disabled", "");
 
     nominations.push(targetText);
-    console.log(nominations);
-    
+        
 }
+
+
 
 
 
