@@ -66,8 +66,6 @@ function displaySearchResults(movieResults) {
                 console.log(nominations[i])
             }
         }
-
-
     }
 }
 
@@ -78,7 +76,12 @@ const addNomination = function (event) {
     targetEl.setAttribute("disabled", "");
 
     nominations.push(targetText);
-        
+
+    displayNominations(targetText);        
+}
+
+function displayNominations(movieNominations) {
+
 }
 
 
