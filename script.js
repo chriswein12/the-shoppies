@@ -12,7 +12,7 @@ const movieSearch = function(event) {
 
     // fetch request and error handling from the OMDB database.
     if (movieName) {
-        const apiUrl = `http://www.omdbapi.com/?s=${movieName}&apikey=c09abee9`;
+        const apiUrl = `https://www.omdbapi.com/?s=${movieName}&apikey=c09abee9`;
 
         fetch(apiUrl).then(function(response) {
             if (response.ok) {
