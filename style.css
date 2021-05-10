@@ -2,6 +2,12 @@ body {
     background-color: rgb(238, 238, 238);
 }
 
+nav {
+    margin-bottom: 40px;
+    box-shadow: 0 8px 16px 0 rgba(35, 35, 35, 0.315);
+}
+
+
 .nominate-btn {
     padding: 0px 3px;
     margin-left: 10px;
@@ -14,4 +20,12 @@ body {
 .form-box {
     border-radius: 10px;
     box-shadow: 0 8px 16px 0 rgba(35,35,35,.16);
+}
+
+.hide-element {
+    display: none;
+}
+
+.link {
+    text-decoration: none;
 }
